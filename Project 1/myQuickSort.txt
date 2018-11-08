@@ -1,0 +1,68 @@
+//	public static ArrayList<Integer> QuickSortMain(ArrayList<Integer> a)
+//	{
+//		//Declaring three local arrays
+//		ArrayList<Integer> lessthan = new ArrayList<Integer>(); 
+//		ArrayList<Integer> greaterthan = new ArrayList<Integer>();  
+//		ArrayList<Integer> equalto = new ArrayList<Integer>(); 
+//		
+//		//Define the base case
+//		if (a.size()<=1)
+//			return a;
+//		
+//		//Else
+//		//Picking a pivot randomly
+//		Random rand = new Random();
+//		int randval = rand.nextInt(a.size());
+//		int pivot = randval;
+//		
+//
+//		
+//		//Dividing the array into less than, greater than
+//		//and equal to
+//		for (int d=0; d<a.size(); d++)
+//		{
+//			//If the value in the array is lesser than, 
+//			//greater than or equal to the value
+//			//of the pivot element
+//			if (a.get(d)<a.get(pivot))
+//			{
+//				//Counting inversions here
+//				//if (d>pivot)
+//				inversions+= (greaterthan.size()+equalto.size());
+//				lessthan.add(a.get(d));
+//			}
+//			else if (a.get(d)>a.get(pivot))
+//			{
+//				//Counting inversions here
+//				if (d<pivot)
+//					inversions++;
+//				greaterthan.add(a.get(d));
+//			}
+//			else if (a.get(d)==a.get(pivot))
+//			{
+//				//Counting inversions here
+//				if (d!=pivot)
+//					inversions+= (greaterthan.size());
+//				equalto.add(a.get(d));
+//			}
+//		}
+//		
+//		return QuickSortMerge(QuickSortMain(lessthan), equalto, QuickSortMain(greaterthan));
+//	}
+//	
+//	public static ArrayList<Integer> QuickSortMerge(ArrayList<Integer> a, ArrayList<Integer> b, ArrayList<Integer> c)
+//	{
+//		//Declaring an Arraylist which will contain elements of all the three arrays in order.
+//		ArrayList<Integer> total = new ArrayList<Integer>();
+//		
+//		if (a.isEmpty() == false)
+//		total.addAll(a);
+//		
+//		if (b.isEmpty() == false)
+//		total.addAll(b);
+//		
+//		if (c.isEmpty() == false)
+//		total.addAll(c);
+//		
+//		return total;
+//	}
